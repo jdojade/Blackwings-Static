@@ -1,2 +1,2 @@
 # Blackwings-Static
-Static webapages 
+Just Clone or download the repo
