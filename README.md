@@ -1,2 +1,2 @@
 # Blackwings-Static
-Just Clone or download the repo
+Just clone or download the repo
