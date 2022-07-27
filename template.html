@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="/main-style.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <link href="/account.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/scripts/jquery-1.8.0.min.js"></script>
+    <script src="/scripts/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <div>
+
+        
+    </div>
+    <!------ Javascript for toggle Menu ---->
+    <script type="text/javascript">
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+    <!------ Javascript for toggle form ---->
+    <script type="text/javascript">
+        var Loginform = document.getElementById("LoginForm");
+        var Regform = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            Regform.style.transform = "translateX(0px)";
+            Loginform.style.transform = "translateX(0px)"
+            Indicator.style.transform = "translateX(110px)"
+        }
+
+        function login() {
+            Regform.style.transform = "translateX(300px)";
+            Loginform.style.transform = "translateX(300px)"
+            Indicator.style.transform = "translateX(0px)"
+        }
+    </script>
+    <!------ Javascript for toggle account dropdown ---->
+    <script type="text/javascript">
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+    </script>
+    <!------ Javascript for toggle MyOrders dropdown ---->
+    <script type="text/javascript">
+        document.querySelector('.custom-select-wrapper').addEventListener('click', function () {
+            this.querySelector('.custom-select').classList.toggle('open');
+            for (const option of document.querySelectorAll(".custom-option")) {
+                option.addEventListener('click', function () {
+                    if (!this.classList.contains('selected')) {
+                        this.parentNode.querySelector('.custom-option.selected').classList.remove(
+                            'selected');
+                        this.classList.add('selected');
+                        this.closest('.custom-select').querySelector('.custom-select__trigger span')
+                            .textContent = this.textContent;
+                    }
+                })
+            }
+            window.addEventListener('click', function (e) {
+                const select = document.querySelector('.custom-select')
+                if (!select.contains(e.target)) {
+                    select.classList.remove('open');
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>

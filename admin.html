@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="/main-style.css style.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <link href="/account.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/scripts/jquery-1.8.0.min.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+</head>
+<body>
+
+    <div>
+        
+    </div>
+
+    <!--------Script for admin sidenavbar----------->
+    <script>
+		let menubtn = document.querySelector("#menubtn");
+		let sidebar = document.querySelector(".sidebar");
+
+		menubtn.onclick = function(){
+			sidebar.classList.toggle("active");
+		}
+    </script>
+    <!--------Script for admin ----------->
+        <script>
+	    $(':radio').change(function() {
+          console.log('New star rating: ' + this.value);
+        });
+        </script>

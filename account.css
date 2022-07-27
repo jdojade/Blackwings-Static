@@ -1,0 +1,409 @@
+.wrapper {
+  max-width: 500px;
+  max-width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.125);
+}
+.wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.wrapper .form {
+  width: 100%;
+}
+.wrapper .form .input_field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .form .input_field label {
+  width: 200px;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.wrapper .form .input_field .input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transform: all 0.3 ease;
+}
+.wrapper .form .input_field .custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+.wrapper .form .input_field .custom_select select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #d5dbd9;
+  width: 100%;
+  height: 100%;
+  padding: 8px 10px;
+  border-radius: 3px;
+  outline: none;
+}
+.wrapper .form .input_field .custom_select:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field select:focus {
+  border: 1px solid #000000;
+}
+
+.wrapper .form .input_field p {
+  font-size: 14px;
+  position: absolute;
+  color: #757575;
+  margin-left: 25px;
+}
+.wrapper .form .input_field .check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .input_field .check input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .input_field .check .checkmark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  display: block;
+  position: relative;
+  background: #fff;
+}
+
+.wrapper .form .input_field .check .checkmark:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .input_field .check input[type="checkbox"]:checked ~ .checkmark {
+  background: #000;
+}
+.wrapper
+  .form
+  .input_field
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmark:before {
+  display: block;
+}
+.wrapper .form .input_field .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  transition: background 0.5s;
+}
+.wrapper .form .input_field:last-child {
+  margin-bottom: 0;
+}
+.wrapper .form .input_field .btn:hover {
+  background: #563434;
+}
+.wrapper a {
+  color: deepskyblue;
+  text-align: center;
+  margin-left: 60px;
+}
+
+/*---------- User Account Dropdown Menu-------*/
+.action {
+  position: relative;
+  right: -20px;
+}
+.action .profile {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.action .profile img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.action .menu {
+  position: absolute;
+  top: 120px;
+  right: -10px;
+  padding: 10px 20px;
+  background: #fff;
+  width: 200px;
+  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transform-origin: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+.action .menu.active {
+  top: 80px;
+  visibility: visible;
+  opacity: 1;
+}
+.action .menu::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.action .menu h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.2em;
+}
+.action .menu h3 span {
+  font-size: 14px;
+  color: #cecece;
+  font-weight: 400;
+}
+.action .menu ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+.action .menu ul li img {
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.action .menu ul li:hover img {
+  opacity: 1;
+}
+.action .menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.action .menu ul li:hover a {
+  color: #051937;
+}
+
+/*----Reviews-----*/
+#testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.testimonials-heading {
+  letter-spacing: 1px;
+  margin: 30px 0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials-heading h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: #202020;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+.testimonials-heading span {
+  font-size: 1.3rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.testimonials-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.testimonials-box {
+  width: 500px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 15px;
+}
+.testimonials-box:hover {
+  transform: translateZ(-10px);
+  transition: all ease 0.3s;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+.name-user strong {
+  color: #3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.name-user span {
+  color: #979797;
+  font-size: 0.8rem;
+}
+.review {
+  color: #f9d71c;
+}
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.client-comment p {
+  font-size: 0.9rem;
+  color: #4b4b4b;
+}
+
+@media (max-width: 1060px) {
+  .testimonials-box {
+    width: 45%;
+    padding: 10px;
+  }
+}
+@media (max-width: 790px) {
+  .testimonials-box {
+    width: 100%;
+  }
+  .testimonials-heading h1 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 340px) {
+  .box-top {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .review {
+    margin-bottom: 10px;
+  }
+}
+
+/*----Table in Admin-----*/
+.trow {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.adthr {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admintable #header {
+  background-color: #ddd;
+  color: #000;
+}
+@media only screen and (max-width: 768px) {
+  .admintable {
+    width: 90%;
+  }
+}
+/*----- Order Details-----*/
+.cont {
+  top: 50%;
+  left: 50%;
+}
+.cont input[type="radio"] {
+  display: none;
+}
+.cont label {
+  position: relative;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.cont label:before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+.cont input[type="radio"]:checked + label {
+  background: #000000;
+  color: white;
+}
+.cont input[type="radio"]:checked + label:before {
+  height: 8px;
+  width: 8px;
+  border: 5px solid white;
+  background-color: #000000;
+}
